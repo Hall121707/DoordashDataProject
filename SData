@@ -3,7 +3,7 @@ import matplotlib.pyplot as bar
 import numpy as np
 
 
-
+print("hello world")
 
 #Trip class
 class Trip:
