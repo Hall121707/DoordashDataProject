@@ -1,13 +1,12 @@
-import matplotlib.pyplot as plt 
-import matplotlib.pyplot as bar
+import matplotlib.pyplot as plt
 import numpy as np
+from datetime import datetime
 
 
-print("hello world")
 
 #Trip class
 class Trip:
-    def __init__(self, miles_driven, delivery_zipcode, earnings, time_start, time_end,restaurant):
+    def __init__(self, miles_driven, delivery_zipcode, earnings, time_start, time_end,restaurant,date):
         self.miles_driven = miles_driven
         self.delivery_zipcode = delivery_zipcode
         self.earnings = earnings
@@ -15,60 +14,60 @@ class Trip:
         self.time_end = time_end
         self.time_difference = time_end - time_start
         self.restaurant = restaurant
+        self.date = datetime.strptime(date, '%Y-%m-%d')
         
+STrip0 = Trip(10, 1609, 20, 100, 200, 'dennys', '2024-01-01')
+STrip1 = Trip(15, 1307, 28, 905, 1030, 'dennys', '2024-01-01')
+STrip2 = Trip(28, 1422, 7, 416, 530, 'dennys', '2024-01-02')
+STrip3 = Trip(18, 1785, 12, 410, 525, 'dennys', '2024-01-02')
+STrip4 = Trip(5, 1852, 23, 314, 430, 'dennys', '2024-01-03')
+STrip5 = Trip(13, 1116, 5, 805, 920, 'dennys', '2024-01-03')
+STrip6 = Trip(9, 1485, 30, 1202, 1345, 'dennys', '2024-01-03')
+STrip7 = Trip(25, 1633, 16, 607, 720, 'dennys', '2024-01-03')
+STrip8 = Trip(3, 1266, 17, 1007, 1125, 'dennys', '2024-01-03')
+STrip9 = Trip(20, 1299, 3, 905, 1030, 'dennys', '2024-01-05')
+STrip10 = Trip(8, 1444, 25, 1512, 1630, 'dennys', '2024-01-05')
+STrip11 = Trip(17, 1033, 4, 715, 830, 'dennys', '2024-01-05')
+STrip12 = Trip(21, 1978, 30, 814, 930, 'dennys', '2024-01-05')
+STrip13 = Trip(6, 1121, 9, 416, 530, 'dennys', '2024-01-05')
+STrip14 = Trip(11, 1376, 14, 612, 730, 'dennys', '2024-01-05')
+STrip15 = Trip(4, 1789, 28, 1012, 1130, 'dennys', '2024-01-05')
+STrip16 = Trip(22, 1590, 27, 1412, 1530, 'dennys', '2024-01-05')
+STrip17 = Trip(19, 1313, 7, 1114, 1230, 'dennys', '2024-01-05')
+STrip18 = Trip(14, 1606, 25, 1604, 1730, 'dennys', '2024-01-06')
+STrip19 = Trip(16, 1155, 18, 1203, 1330, 'dennys', '2024-01-06')
+STrip20 = Trip(23, 1710, 10, 713, 830, 'dennys', '2024-01-06')
+STrip21 = Trip(27, 1432, 13, 1005, 1130, 'dennys', '2024-01-06')
+STrip22 = Trip(2, 1463, 24, 709, 825, 'dennys', '2024-01-06')
+STrip23 = Trip(29, 1977, 27, 1612, 1730, 'dennys', '2024-01-07')
+STrip24 = Trip(26, 1349, 22, 814, 930, 'dennys', '2024-01-07')
+STrip25 = Trip(12, 1123, 18, 1213, 1330, 'dennys', '2024-01-07')
+STrip26 = Trip(1, 1497, 19, 609, 725, 'dennys', '2024-01-07')
+STrip27 = Trip(24, 1800, 29, 1010, 1130, 'dennys', '2024-01-07')
+STrip28 = Trip(10, 1257, 8, 715, 830, 'dennys', '2024-01-07')
+STrip29 = Trip(30, 1377, 6, 911, 1030, 'popeyes', '2024-01-07')
+STrip30 = Trip(7, 1032, 25, 1212, 1330, 'popeyes', '2024-01-08')
+STrip31 = Trip(25, 1421, 29, 715, 830, 'popeyes', '2024-01-08')
+STrip32 = Trip(3, 1279, 13, 915, 1030, 'popeyes', '2024-01-08')
+STrip33 = Trip(15, 1241, 18, 1004, 1130, 'popeyes', '2024-01-09')
+STrip34 = Trip(28, 1763, 25, 815, 930, 'popeyes', '2024-01-09')
+STrip35 = Trip(19, 1690, 7, 1513, 1630, 'popeyes', '2024-01-09')
+STrip36 = Trip(11, 1629, 16, 1410, 1530, 'popeyes', '2024-01-09')
+STrip37 = Trip(9, 1286, 14, 812, 930, 'popeyes', '2024-01-09')
+STrip38 = Trip(21, 1576, 23, 1511, 1630, 'popeyes', '2024-01-10')
+STrip39 = Trip(6, 1275, 13, 1110, 1230, 'popeyes', '2024-01-10')
+STrip40 = Trip(2, 1230, 29, 1213, 1330, 'popeyes', '2024-01-11')
+STrip41 = Trip(16, 1111, 6, 1510, 1630, 'popeyes', '2024-01-12')
+STrip42 = Trip(20, 1849, 12, 1005, 1130, 'popeyes', '2024-01-12')
+STrip43 = Trip(17, 1638, 10, 815, 930, 'popeyes', '2024-01-12')
+STrip44 = Trip(4, 1347, 21, 1410, 1530, 'popeyes', '2024-01-15')
+STrip45 = Trip(8, 1783, 4, 1214, 1330, 'popeyes', '2024-01-15')
+STrip46 = Trip(7, 1454, 18, 1112, 1230, 'popeyes', '2024-01-15')
+STrip47 = Trip(12, 1059, 25, 1410, 1530, 'popeyes', '2024-01-15')
+STrip48 = Trip(5, 1284, 29, 1003, 1130, 'popeyes', '2024-01-15')
 
     
-        
-      
-STrip0 = Trip(10, 1609, 20, 100, 200,'dennys')
-STrip1 = Trip(15, 1307, 28, 905, 1030,'dennys')
-STrip2 = Trip(28, 1422, 7, 416, 530,'dennys')
-STrip3 = Trip(18, 1785, 12, 410, 525,'dennys')
-STrip4 = Trip(5, 1852, 23, 314, 430,'dennys')
-STrip5 = Trip(13, 1116, 5, 805, 920,'dennys')
-STrip6 = Trip(9, 1485, 30, 1202, 1345,'dennys')
-STrip7 = Trip(25, 1633, 16, 607, 720,'dennys')
-STrip8 = Trip(3, 1266, 17, 1007, 1125,'dennys')
-STrip9 = Trip(20, 1299, 3, 905, 1030,'dennys')
-STrip10 = Trip(8, 1444, 25, 1512, 1630,'dennys')
-STrip11 = Trip(17, 1033, 4, 715, 830,'dennys')
-STrip12 = Trip(21, 1978, 30, 814, 930,'dennys')
-STrip13 = Trip(6, 1121, 9, 416, 530,'dennys')
-STrip14 = Trip(11, 1376, 14, 612, 730,'dennys')
-STrip15 = Trip(4, 1789, 28, 1012, 1130,'dennys')
-STrip16 = Trip(22, 1590, 27, 1412, 1530,'dennys')
-STrip17 = Trip(19, 1313, 7, 1114, 1230,'dennys')
-STrip18 = Trip(14, 1606, 25, 1604, 1730,'dennys')
-STrip19 = Trip(16, 1155, 18, 1203, 1330,'dennys')
-STrip20 = Trip(23, 1710, 10, 713, 830,'dennys')
-STrip21 = Trip(27, 1432, 13, 1005, 1130,'dennys')
-STrip22 = Trip(2, 1463, 24, 709, 825,'dennys')
-STrip23 = Trip(29, 1977, 27, 1612, 1730,'dennys')
-STrip24 = Trip(26, 1349, 22, 814, 930,'dennys')
-STrip25 = Trip(12, 1123, 18, 1213, 1330,'dennys')
-STrip26 = Trip(1, 1497, 19, 609, 725,'dennys')
-STrip27 = Trip(24, 1800, 29, 1010, 1130,'dennys')
-STrip28 = Trip(10, 1257, 8, 715, 830,'dennys')
-STrip29 = Trip(30, 1377, 6, 911, 1030,'popeyes')
-STrip30 = Trip(7, 1032, 25, 1212, 1330,'popeyes')
-STrip31 = Trip(25, 1421, 29, 715, 830,'popeyes')
-STrip32 = Trip(3, 1279, 13, 915, 1030,'popeyes')
-STrip33 = Trip(15, 1241, 18, 1004, 1130,'popeyes')
-STrip34 = Trip(28, 1763, 25, 815, 930,'popeyes')
-STrip35 = Trip(19, 1690, 7, 1513, 1630,'popeyes')
-STrip36 = Trip(11, 1629, 16, 1410, 1530,'popeyes')
-STrip37 = Trip(9, 1286, 14, 812, 930,'popeyes')
-STrip38 = Trip(21, 1576, 23, 1511, 1630,'popeyes')
-STrip39 = Trip(6, 1275, 13, 1110, 1230,'popeyes')
-STrip40 = Trip(2, 1230, 29, 1213, 1330,'popeyes')
-STrip41 = Trip(16, 1111, 6, 1510, 1630,'popeyes')
-STrip42 = Trip(20, 1849, 12, 1005, 1130,'popeyes')
-STrip43 = Trip(17, 1638, 10, 815, 930,'popeyes')
-STrip44 = Trip(4, 1347, 21, 1410, 1530,'popeyes')
-STrip45 = Trip(8, 1783, 4, 1214, 1330,'popeyes')
-STrip46 = Trip(7, 1454, 18, 1112, 1230,'popeyes')
-STrip47 = Trip(12, 1059, 25, 1410, 1530,'popeyes')
-STrip48 = Trip(5, 1284, 29, 1003, 1130,'popeyes')
+ #All lists   
 trip_list=[
     STrip0, STrip1, STrip2, STrip3, STrip4, STrip5, STrip6, STrip7, STrip8, STrip9,
     STrip10, STrip11, STrip12, STrip13, STrip14, STrip15, STrip16, STrip17, STrip18, STrip19,
@@ -86,11 +85,10 @@ earnings_list = [trip.earnings for trip in [STrip0, STrip1, STrip2, STrip3, STri
                                             STrip21, STrip22, STrip23, STrip24, STrip25, STrip26, STrip27, STrip28, STrip29, STrip30,
                                             STrip31, STrip32, STrip33, STrip34, STrip35, STrip36, STrip37, STrip38, STrip39, STrip40,
                                             STrip41, STrip42, STrip43, STrip44, STrip45, STrip46, STrip47, STrip48]]
-earnings_total = sum(earnings_list)
-print (earnings_total)
+earning_miles_list=[miles_driven_list,earnings_list]
 
-miles_driven_list_range= range(len(miles_driven_list))
-earnings_list_list_range= range(len(earnings_list))
+
+
 
 def calculate_total_miles_driven(trip_list):
     return sum(trip.miles_driven for trip in trip_list)
@@ -105,9 +103,23 @@ total_earnings= calculate_average_earnings(trip_list)
 for i, trip in enumerate(trip_list):
     print(f"Time difference for STrip{i}: {trip.time_difference} minutes")
     
-# 1. Make plots, earnings over time, earnings per type of restaurant,platform vs earnings,
-# 2.import map of worcester Heat map
-# 3. Machine learning
+
+#plots
+plt.subplot(1,2,1)
+plt.style.use('ggplot')
+plt.hist(x = earnings_list,bins = 10, color="blue", edgecolor='black')
+plt.title('Earnings Distribution')
+plt.xlabel('Earnings')
+plt.ylabel('Frequency')
+
+
+plt.subplot(1, 2, 2)
+plt.hist(miles_driven_list, bins=10, color="blue", edgecolor="black")
+plt.title('Miles Driven Distribution')
+plt.xlabel('Miles Driven')
+plt.ylabel('Frequency')
+
+plt.show()
 
 
 
